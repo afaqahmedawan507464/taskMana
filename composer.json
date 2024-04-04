@@ -1,0 +1,9 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "cartalyst/sentinel": "6.0",
+        "illuminate/database": "^9.52",
+        "illuminate/events": "^9.52",
+        "symfony/http-foundation": "^7.0"
+    }
+}

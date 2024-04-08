@@ -83,7 +83,7 @@ if (isset($message)) {
                                                         <option value="<?php echo $fetchRoless['id'] ?>"><?php echo $fetchRoless['name'] ?></option>
                                                     <?php endforeach; ?>
                                                 <?php else : ?>
-                                                    <p>No roles found.</p>
+
                                                 <?php endif; ?>
                                             </select>
                                         </div>

@@ -76,7 +76,7 @@ if (isset($message)) {
                                             </tr>
                                         <?php endforeach; ?>
                                     <?php else : ?>
-                                        <p>No roles found.</p>
+                                        
                                     <?php endif; ?>
                                 </tbody>
                             </table>

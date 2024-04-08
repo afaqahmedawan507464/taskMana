@@ -168,9 +168,10 @@ if (isset($message)) {
     </div>
     <!-- edit -->
     <?php
-    if (!empty($actionController)) {
-        foreach ($actionController as $users) {
-    ?>
+    if (!empty($actionController)) { ?>
+        <?php if (is_array($actionController) && count($actionController) > 0) : ?>
+            <?php foreach ($actionController as $users) {
+        ?>
             <div class="modal fade" id="edit_role_<?php echo $users['id']; ?>" tabindex="-1" aria-labelledby="rolesModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -198,15 +199,17 @@ if (isset($message)) {
                     </div>
                 </div>
             </div>
-    <?php
-        }
-    }
-    ?>
+            <?php } ?>
+     <?php else : ?>
+       
+    <?php endif; ?>
+   <?php } ?>
     <!-- delete -->
     <?php
-    if (!empty($actionController)) {
-        foreach ($actionController as $users) {
-    ?>
+    if (!empty($actionController)) { ?>
+        <?php if (is_array($actionController) && count($actionController) > 0) : ?>
+            <?php foreach ($actionController as $users) {
+?>
             <div class="modal fade" id="delete_role_<?php echo $users['id']; ?>" tabindex="-1" aria-labelledby="rolesModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -228,10 +231,11 @@ if (isset($message)) {
                     </div>
                 </div>
             </div>
-    <?php
-        }
-    }
-    ?>
+            <?php } ?>
+     <?php else : ?>
+       
+    <?php endif; ?>
+   <?php } ?>
     <!--   Core JS Files   -->
     <script src="/tassky/view/theme/assets/js/core/jquery.min.js"></script>
     <script src="/tassky/view/theme/assets/js/core/popper.min.js"></script>
